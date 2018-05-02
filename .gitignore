@@ -1,3 +1,5 @@
 # ignore
-storage/cache/views/
+/storages/cache/views/*
+/vendor
+/node_modules
 .env
