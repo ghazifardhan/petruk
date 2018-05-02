@@ -1,4 +1,5 @@
 /storages/cache/views/*
 /vendor
 /node_modules
+/assets/*
 .env

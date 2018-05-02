@@ -12,23 +12,8 @@ class HomeController extends Controller {
         parent::__construct();
     }
 
-    public function test($id){
-
-        $nama = $this->request->get('name');
-
-        $data = [
-            'name' => $nama,
-            'id' => $id
-        ];
-
-        return $this->json($data);
-    }
-
     public function home(){
-
-        $users = User::all();
-        // return $this->json($users);
-        return $this->render('home', array('name' => 'Ghazi', 'users' => $users));
+        return $this->render('welcome');
     }
 
 }

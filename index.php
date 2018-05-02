@@ -4,9 +4,9 @@ $loader = require 'vendor/autoload.php';
 $loader->register();
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Dotenv\Dotenv;
 use Petruk\Framework\Database;
+use Petruk\Framework\Template;
 
 // Initialize dotenv
 $dotenv = new Dotenv();
@@ -16,7 +16,10 @@ $dotenv->load(__DIR__.'/.env');
 new Database();
 
 $request = Request::createFromGlobals();
-    
+
+// Initialize template
+$template = new Template();
+
 // Petruk framework is now handling itself the request
 $app = new Petruk\Framework\Core();
 
