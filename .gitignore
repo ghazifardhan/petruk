@@ -1,0 +1,3 @@
+# ignore
+storage/cache/views/
+.env
