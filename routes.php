@@ -8,3 +8,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 $app->map('GET', '/', function() use ($request, $template){
     return $template->render('welcome');
 });
+
+$app->map('GET', '/home', function() use ($request, $template){
+    return new Response('ini adalah home');
+});

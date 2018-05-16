@@ -16,4 +16,8 @@ class HomeController extends Controller {
         return $this->render('welcome');
     }
 
+    public function test(){
+        return $this->response->setContent('Ini adalah dari controller');
+    }
+
 }
